@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Offsite",
+      "hasCanvas": false,
+      "bodyTextLen": 2503,
+      "bodyTextHash": "4aa7bb0e0b59b430e094e166e88d7c7a130ea0ee6e3ea55226c6c67ffb3820b6",
+      "bodyTextPrefix": "Offsite Start Board Gigs Pipeline Match REMOTE INCOME, THIS WEEK",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Offsite",
+      "hasCanvas": false,
+      "bodyTextLen": 2471,
+      "bodyTextHash": "53e3d7d971b0bfbf171bba6bd3e4f7cb8514fdce85575ba596fa85bab2a06f3f",
+      "bodyTextPrefix": "Offsite REMOTE INCOME, THIS WEEK Get paid without going into an ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}

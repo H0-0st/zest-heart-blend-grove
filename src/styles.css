@@ -1,0 +1,122 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --color-background: #efe8dc;
+  --color-foreground: #171512;
+  --color-card: #f7f1e6;
+  --color-card-foreground: #171512;
+  --color-popover: #fbf6ec;
+  --color-popover-foreground: #171512;
+  --color-primary: #1c4638;
+  --color-primary-foreground: #f4eee2;
+  --color-secondary: #e4d9c8;
+  --color-secondary-foreground: #171512;
+  --color-muted: #e7dccb;
+  --color-muted-foreground: #6b6458;
+  --color-accent: #1c4638;
+  --color-accent-foreground: #f4eee2;
+  --color-destructive: #8f2d22;
+  --color-destructive-foreground: #f4eee2;
+  --color-border: #d9cbb6;
+  --color-input: #d9cbb6;
+  --color-ring: #1c4638;
+  --color-pine: #1c4638;
+  --color-pine-fg: #f3eadc;
+  --color-ink: #171512;
+  --color-paper: #efe8dc;
+  --color-cream: #f7f1e6;
+  --color-warn: #8a5a24;
+  --color-ok: #2c6b4f;
+
+  --radius-xs: 0.25rem;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+  --radius: 0.75rem;
+
+  --font-display: "Fraunces", "Iowan Old Style", Palatino, Georgia, serif;
+  --font-sans: "Figtree", "Source Sans 3", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+
+  --shadow-soft: 0 1px 0 rgb(23 21 18 / 0.04), 0 12px 32px -18px rgb(23 21 18 / 0.18);
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: var(--color-background);
+    color: var(--color-foreground);
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.5;
+    min-height: 100dvh;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    letter-spacing: -0.03em;
+    line-height: 1.12;
+  }
+
+  p {
+    text-wrap: pretty;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--color-primary) 22%, transparent);
+    color: var(--color-foreground);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+.rise-in {
+  animation: rise-in 400ms cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.rise-in-1 { animation-delay: 40ms; }
+.rise-in-2 { animation-delay: 80ms; }
+.rise-in-3 { animation-delay: 120ms; }
+.rise-in-4 { animation-delay: 160ms; }
+.rise-in-5 { animation-delay: 200ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise-in,
+  .rise-in-1,
+  .rise-in-2,
+  .rise-in-3,
+  .rise-in-4,
+  .rise-in-5 {
+    animation: none;
+  }
+}
